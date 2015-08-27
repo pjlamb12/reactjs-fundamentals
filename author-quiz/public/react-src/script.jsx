@@ -17,6 +17,19 @@
 		}
 	});
 
+	var data = [
+		'test',
+		'test',
+		'test'
+	];
+
+	var books = [
+		'The Lord of the Rings',
+		'The Iliad',
+		'The Adventures of Huckleberry Finn',
+		'The Scarlet Letter'
+	]
+
 	var Book = React.createClass({
 		propTypes: {
 			title: React.PropTypes.string.isRequired
@@ -30,6 +43,6 @@
 		}
 	});
 
-	React.render(<Quiz books={['The Lord of the Rings', 'The Iliad']} />, document.getElementById("container") );
+	React.render(<Quiz books={books} />, document.getElementById("container") );
 
 })();
