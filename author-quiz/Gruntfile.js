@@ -2,6 +2,11 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		connect: {
+			server: {
+				options: {}
+			}
+		},
 		babel: {
 			options: {
 				sourceMap: true
@@ -13,9 +18,18 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
+			options: {
+				livereload: true
+			},
 			jsx: {
+				options: {
+					livereload: false
+				},
 				files: ['**/*.jsx'],
 				tasks: ['babel']
+			},
+			js: {
+				files: ['**/*.js']
 			}
 		}
 	});
