@@ -1,1 +1,2 @@
-.module-cache
+.module-cache/
+public/react-prod/.module-cache/
